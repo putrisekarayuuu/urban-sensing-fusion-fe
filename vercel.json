@@ -5,9 +5,18 @@
     }
   },
   "routes": [
-    { "src": "^/$", "dest": "/api/index.php" },     
+    { "src": "^/$", "dest": "/api/index.php" },
+
+    { "src": "^/index$", "dest": "/api/index.php" },
+    { "src": "^/index.php$", "dest": "/api/index.php" },
+
     { "src": "^/fusion$", "dest": "/api/fusion.php" },
+    { "src": "^/fusion.php$", "dest": "/api/fusion.php" },
+
     { "src": "^/research$", "dest": "/api/research.php" },
-    { "src": "^/header$", "dest": "/api/header.php" }
+    { "src": "^/research.php$", "dest": "/api/research.php" },
+
+    { "src": "^/header$", "dest": "/api/header.php" },
+    { "src": "^/header.php$", "dest": "/api/header.php" }
   ]
 }
