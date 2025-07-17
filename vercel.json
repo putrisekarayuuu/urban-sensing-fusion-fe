@@ -5,6 +5,9 @@
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "^/$", "dest": "/api/index.php" },     
+    { "src": "^/fusion$", "dest": "/api/fusion.php" },
+    { "src": "^/research$", "dest": "/api/research.php" },
+    { "src": "^/header$", "dest": "/api/header.php" }
   ]
 }
