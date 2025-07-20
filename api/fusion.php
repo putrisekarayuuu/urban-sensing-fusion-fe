@@ -54,7 +54,7 @@
 
 <body>
 
-<?php include __DIR__ . '/header.php'; ?>
+<?php include __DIR__ . '/components/header.php'; ?>
 
 <!-- Hero Section -->
 <section style="background-image: url('../static/assets/img/aerial-view-of-urban-landscape.jpg'); background-size: cover; background-position: center; min-height: 60vh; position:relative;">
@@ -198,6 +198,8 @@
     </div>
   </div>
 </div>
+
+<?php include __DIR__ . '/components/backToTop.html'; ?>
 
 <!-- Scripts (Bootstrap + Leaflet + Custom) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -8,6 +8,7 @@
 	<link rel="icon" href="../static/assets/img/logo_stis.png">
 	<title>Urban Sensing Fusion</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link href="../static/assets/css/mediumish.css" rel="stylesheet">
@@ -18,12 +19,15 @@
 			color: #007bff !important;
 			font-weight: bold;
 		}
+		h2 {
+			color: #183059;
+		}
 	</style>
 </head>
 
 <body>
 
-<?php include __DIR__ . '/header.php'; ?>
+<?php include __DIR__ . '/components/header.php'; ?>
 
 <!-- Begin of Header Image -->
 <section style="background-image: url('../static/assets/img/aerial-view-of-urban-landscape.jpg'); background-size: cover; background-position: center; position: relative; min-height: 95vh;">
@@ -58,273 +62,175 @@
 			<!-- Begin Post Content -->
 			<div class="article-post">
 
-				<div class="city-introduction" style="padding-top: 1.5rem;">
-					<h2 class="section-title"><b>The Era of Massive Remote Sensing Data</b></h1>
+				<div class="remote-sensing-introduction" style="padding-top: 1.5rem;">
+					<h2 class="section-title"><b>The Era of Massive Remote Sensing Data</b></h2>
 					
 					<figure style="text-align: center; margin: 2rem auto;">
-						<img src="../static/assets/img/earth-observation.gif" alt="Earth Observation Animation" style="width: 100%; max-width: 550px; display: block; margin: 0 auto;">
+						<img src="../static/assets/img/earth-observation.gif" alt="Earth Observation Animation" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
 						
-						<div style="max-width: 550px; margin: 0 auto; font-size: 11px; color: #555; text-align: justify;">
-							<figcaption style="margin-top: 0.5rem;">Gambar 1. Ilustrasi Pengamatan Bumi oleh Satelit</figcaption>
+						<div style="max-width: 600px; margin: 0 auto; font-size: 11px; color: #555; text-align: justify;">
+							<figcaption style="margin-top: 0.5rem;">Gambar 1. Ilustrasi Pengamatan Bumi oleh Satelit Sentinel-2</figcaption>
 							<figcaption>Sumber: European Space Agency (ESA)</figcaption>
 						</div>
 					</figure>
-
+					<h4>
+						<b>
+							Remote Sensing as A Part of Geospatial Big Data
+						</b>
+					</h4>
 					<p>
-						Saat ini, <b>kawasan perkotaan</b> telah menjadi <b>tempat tinggal</b> bagi <b>mayoritas populasi penduduk</b> di Indonesia, dengan tren urbanisasi yang terus meningkat dalam beberapa tahun terakhir.
+						Data remote sensing merupakan salah satu bagian dari <i>geospatial big data</i>, yang terus berkembang dengan volume data yang sangat masif hingga saat ini, di mana jumlahnya terus bertambah dan bahkan dapat mencapai ukuran <i>terabyte</i> setiap harinya. 
+						Tak hanya besar dalam jumlah, data ini juga sangat beragam karena dihasilkan oleh berbagai jenis sensor dengan variasi dalam format, resolusi, dan waktu akuisisi. Kecepatan akuisisi yang semakin tinggi, bersama dengan perbedaan tingkat ketelitian, akurasi, dan kondisi pengambilan data, membentuk kompleksitas karakteristik data secara keseluruhan. 
+						Karakteristiknya yang kaya, kompleks, dan beragam menjadikan data ini memiliki potensi yang sangat besar untuk mendukung berbagai riset dan aplikasi lintas bidang, bahkan telah banyak dimanfaatkan dalam berbagai konteks penelitian saat ini. 
 					</p>
+				</div>
+
+				<div class="data-engineering-introduction"  style="padding-top: 1.5rem;">
+					<h2 class="section-title"><b>Data Engineering in Remote Sensing</b></h2>
 					<br>
-					<div class="urban-sdgs">
-						<h4><b>Urgensi Kawasan Perkotaan dalam SDGs</b></h4>
-						<div class="urban-sdgs-content">
-							<figure>
-								<img src="../static/assets/img/sdgs-11-3.png" class="sdgs-image">
-								<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-									Gambar 2. Target 11.3 SDGs
-								</figcaption>
-							</figure>
-							<div class="sdgs-text">
-								<p>
-									Berdasarkan Tujuan 11 dari Sustainable Development Goals (SDGs), khususnya target 11.3 yang menyatakan:
-								</p>
-								<blockquote>
-									“By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries”
-								</blockquote>
-								<p>
-									Sehingga diperlukan pemetaan wilayah perkotaan yang tepat agar perencanaan kota lebih terarah dan berkelanjutan sesuai dengan tujuan.
-								</p>
-							</div>
+					<h4>
+						<b>
+							The Importance of Pre-Processing in Remote Sensing
+						</b>
+					</h4>
+					<p>
+						Karena kompleksitas dan heterogenitasnya yang tinggi, terutama untuk data multisumber, <i>geospatial big data</i> seperti data <i>remote sensing</i> sangat dipengaruhi oleh berbagai faktor selama proses akuisisi, seperti kondisi atmosfer, sudut pencitraan, dan perbedaan karakteristik sensor. 
+						Faktor-faktor ini dapat menurunkan kualitas citra yang dikumpulkan dan menghasilkan data yang tidak konsisten antar waktu atau antar sensor. 
+						Oleh karena itu, tahapan <i>preprocessing</i> yang tepat sangat diperlukan sebelum data digunakan dalam proses analisis, guna memastikan hasil yang diperoleh tetap akurat dan dapat diandalkan.
+					</p>
+
+					<h4>
+						<b>
+							The Perspective of Data Engineering in Remote Sensing
+						</b>
+					</h4>
+
+				<div class="data-engineering-container" style="display: flex; max-width: 1200px; margin: 30px auto; gap: 2rem; align-items: center;" class="data-engineering-container">
+					<div style="flex: 0 0 50%;">
+						<img src="../static/assets/img/Data Engineering Stream.png" alt="Data Engineering Stream" style="width: 100%; height: auto; display: block; max-width:max-content;">
+						<div style="font-size: 12px; color: #555; text-align: center; margin-top: 0.5rem;">
+						Gambar 2. Data Engineering Stream Illustration
 						</div>
+					</div>
+
+					<div style="flex: 1; min-width: 0;">
 						<p>
-							Data geospasial, seperti <b>data hasil remote sensing</b>, berpotensi menjadi <b>sumber data yang efektif</b> untuk mendukung pencapaian tujuan tersebut, khususnya dalam <b>pemetaan dan klasifikasi wilayah perkotaan</b> (Roberts et al., 2019).	
+						Kebutuhan akan <i>preprocessing</i> yang terstruktur sejalan dengan prinsip <i>data engineering</i>, yaitu bagaimana data dikembangkan dan disiapkan agar siap dianalisis. Mengingat kompleksitas <i>remote sensing big data</i>, proses pengelolaan, penyimpanan, dan integrasinya memerlukan arsitektur komputasi yang andal, <i>pipeline</i> yang efisien, serta tahapan seperti harmonisasi data, preprocessing lanjutan, analitik, dan standar interoperabilitas untuk memastikan integrasi data yang efektif lintas <i>platform</i> akuisisi data.
 						</p>
 					</div>
 				</div>
 
+				<p>
+					Tahapan-tahapan <i>preprocessing</i> ini merupakan komponen krusial yang turut menentukan kualitas dan keandalan data yang digunakan pada proses berikutnya. Tanpa persiapan data yang matang, proses analisis yang dijalankan berisiko menghasilkan output yang tidak akurat maupun tidak konsisten dengan kondisi sebenarnya. 
+				</p>
+				<p>
+					Beberapa tahapan preprocessing yang umum dilakukan meliputi koreksi atmosferik, koreksi topografi, <i>coregistration</i>, koreksi radiometrik, koreksi geometrik, serta tahapan lanjutan seperti <b><i>data fusion</i></b> yang berguna untuk memperkaya informasi dari data, khususnya ketika mengolah data yang berasal dari berbagai sumber dan sensor yang berbeda.
+				</p>
+
 				<div class="data-fusion-introduction" style="padding-top: 2rem;">
-					<h1 class="section-title" style="padding-bottom: 1.5rem;"><b>Pengenalan Pendekatan Multi-Source Remote Sensing Data Fusion</b></h1>
+					<h2 class="section-title"><b>Multi-Source Remote Sensing Data Fusion</b></h2>
+					<br>
+					<h4>
+						<b>
+							The Need for Fusion: No Single Sensor Tells the Whole Story
+						</b>
+					</h4>
+					<p class="pt-2"> <b>Seperti yang telah diketahui</b>, <i>remote sensing</i> memiliki peran penting dalam kajian analisis geospasial. Salah satu definisinya dijelaskan oleh Lillesand & Kiefer (2015) sebagai berikut:</p>
+					<blockquote>
+						Remote sensing merupakan teknik untuk memperoleh informasi mengenai suatu objek menggunakan instrumen berupa sensor yang dipasang pada wahana, seperti satelit, pesawat, atau drone, tanpa kontak langsung terhadap objek yang diteliti. 
+					</blockquote>
 					<p>
-						Remote sensing sendiri merujuk pada teknik untuk memperoleh informasi mengenai suatu objek menggunakan instrumen berupa sensor yang dipasang pada wahana (seperti satelit, pesawat, drone, dan lainnya) tanpa kontak langsung terhadap objek yang sedang diteliti (Lillesand & Kiefer, 2015). Satelit merupakan salah satu wahana yang sering dimanfaatkan dalam remote sensing dan produk yang dihasilkan dari teknik ini dikenal sebagai citra satelit. 
+						Satelit merupakan salah satu wahana yang sering dimanfaatkan dalam remote sensing dan produk yang dihasilkan dari teknik ini dikenal sebagai citra satelit.</p>
 					</p>
 					<p>
-						Secara umum, sensor pada satelit terbagi menjadi dua jenis: pasif dan aktif. Sensor pasif tidak memancarkan energi sendiri, melainkan merekam pantulan sinar matahari atau emisi objek seperti termal. Sensor ini menghasilkan data spektral yang kaya, tetapi sensitif terhadap kondisi cuaca. Sementara itu, sensor aktif memancarkan energinya sendiri dan merekam pantulannya dari permukaan bumi, sehingga dapat digunakan kapan saja dan lebih tahan terhadap cuaca. Sensor ini unggul dalam pemantauan struktur objek dan topografi, meskipun data yang dihasilkan lebih terbatas secara spektral dan lebih sulit diinterpretasi. Pemilihan sensor tergantung pada kebutuhan dan karakteristik citra yang ingin diperoleh, karena sejatinya setiap sensor memiliki kegunaannya masing-masing. 
+						Secara umum, sensor satelit terbagi menjadi dua jenis: pasif dan aktif. Sensor pasif tidak memancarkan energi sendiri, melainkan merekam pantulan sinar matahari. Data yang dihasilkan kaya secara spektral, namun sensitif terhadap cuaca. Sebaliknya, sensor aktif memancarkan energinya sendiri dan merekam pantulan dari permukaan bumi, sehingga lebih andal dalam segala kondisi dan unggul untuk memantau struktur serta topografi. Pemilihan sensor bergantung pada kebutuhan dan karakteristik citra, karena masing-masing memiliki keunggulan tersendiri.
 					</p>
 					<p>
-						Sebagai ilustrasi, berikut disajikan perbandingan visual antara dua jenis sensor yang sering digunakan dalam konteks citra satelit, yaitu sensor aktif <i>Synthetic Aperture Radar</i> dan sensor pasif optik. Kedua citra tersebut diambil di wilayah yang sama, yaitu Pulau Bali, pada tanggal 26 Oktober 2011 pukul 10.08 WIT.
+						Sebagai ilustrasi, berikut disajikan perbandingan visual antara dua jenis sensor yang sering digunakan dalam konteks citra satelit, yaitu sensor aktif <i>Synthetic Aperture Radar</i> dan sensor pasif optik. Kedua citra tersebut diambil di wilayah yang sama. 
 					</p>
 					<figure>
-						<img src="../static/assets/img/Envisat vs MODIS.png" style="width: 100%; max-width: 550px; display: block; margin: 0 auto;">
+						<img src="../static/assets/img/Perbandingan Visual Sensor Sentinel-1 dan Sentinel-2 [AWAN].png" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
 						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 3. Perbandingan antara (a) Citra SAR (Envisat) dan (b) Citra Optik (Terra MODIS). Gambar diadopsi dari Kushardono et al. (2016)
+							Gambar 3. Perbandingan visual antara (a) citra SAR Sentinel-1 Level-1 GRD dan (b) citra optik Sentinel-2 MSI Level-2A pada kondisi cuaca berawan di area dan tanggal pengamatan yang sama.
 						</figcaption>
 					</figure>
 					<p>
-						Berdasarkan ilustrasi tersebut, dapat diamati adanya trade-off dalam penggunaan masing-masing sensor. Citra satelit Synthetic Aperture Radar yang ditunjukkan pada gambar (a) mampu memberikan informasi struktur objek yang lebih detail dan tetap dapat merekam dengan jelas meskipun dalam kondisi cuaca buruk. Sebaliknya, citra satelit optik yang ditunjukkan pada gambar (b) memberikan detail visual yang lebih tajam, namun terganggu oleh kondisi cuaca, seperti awan.
+						Berdasarkan ilustrasi tersebut, dapat diamati adanya trade-off dalam penggunaan masing-masing sensor. Citra satelit Synthetic Aperture Radar yang ditunjukkan pada gambar (a) mampu memberikan informasi struktur objek yang lebih detail dan tetap dapat merekam dengan jelas meskipun dalam kondisi cuaca buruk atau berawan. 
+						Sebaliknya, citra satelit optik yang ditunjukkan pada gambar (b) menyajikan detail spektral yang lebih kaya, namun kualitas visualnya secara keseluruhan lebih rentan terhadap gangguan cuaca buruk, seperti tutupan awan, sehingga objek di bawahnya tidak dapat teramati dengan jelas.
 					</p>
 					<p>
-						Lebih lanjut, berikut ini disajikan pula ilustrasi terkait penggunaan citra SAR dan Optik pada kawasan pertanian untuk Wilayah Perkotaan Yanjiang, Tiongkok. 
+						Lebih lanjut, berikut ini disajikan pula ilustrasi terkait penggunaan citra SAR dan Optik pada kawasan perkotaan sekitar Kota Jambi dan Kabupaten Muaro Jambi dalam skala pengamatan yang luas. 
 					</p>
 					<figure>
-						<img src="../static/assets/img/Optik vs SAR Airbone.png" style="width: 100%; max-width: 550px; display: block; margin: 0 auto;">
+						<img src="../static/assets/img/Perbandingan Visual Sensor Sentinel-1 dan Sentinel-2 [DIFERENSIASI OBJEK].png" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
 						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 4. Perbandingan antara citra optik (kiri) dan citra SAR resolusi tinggi oleh sistem SAR airbone. Gambar diadaptasi dari Zhou et al. (2020)
+							Gambar 4. Perbedaan karakteristik pencitraan antara sensor citra (a) citra SAR Sentinel-1 Level-1 GRD dan (b) citra optik Sentinel-2 MSI Level-2A pada area dan tanggal pengamatan yang sama.
 						</figcaption>
 					</figure>
 					<p>
-						Sebagaimana ilustrasi yang diadaptasi dari Zhou et al. (2020), membedakan objek dengan karakteristik spektral serupa pada citra optik menjadi tantangan karena respons spektralnya yang mirip. Sebaliknya, citra SAR mampu membedakan objek-objek tersebut dengan jelas berkat perbedaan nilai backscatter, meskipun interpretasi visualnya cukup sulit dilakukan.
+						Sebagaimana ditunjukkan pada ilustrasi di atas, membedakan objek dengan karakteristik spektral serupa pada citra optik menjadi tantangan karena respons spektralnya yang mirip, terlebih apabila objek-objek tersebut berada dalam jarak yang berdekatan dan citra yang digunakan memiliki resolusi spasial yang kurang memadai.  Sebaliknya, citra SAR mampu membedakan objek-objek tersebut secara lebih jelas melalui variasi nilai backscatter, meskipun interpretasi visualnya cukup sulit dilakukan. 
 					</p>
 					<p>
-						Keterbatasan masing-masing jenis sensor, sebagaimana dijelaskan sebelumnya, menunjukkan bahwa tidak ada satu sensor pun yang dapat menyediakan seluruh informasi secara akurat dan konsisten dalam berbagai kondisi pengamatan. Untuk memanfaatkan informasi komplementer dari berbagai sumber citra, diperlukan pengintegrasian data multisumber, yang sering disebut sebagai remote sensing image fusion atau lebih umum data fusion, guna menghasilkan citra yang lebih mudah diinterpretasi, kaya akan informasi dan lebih bermakna untuk digunakan pada proses analisis lanjutan (Pohl & van Genderen, 2016).
+						Keterbatasan masing-masing jenis sensor, sebagaimana dijelaskan sebelumnya, menunjukkan bahwa tidak ada satu sensor pun yang dapat menyediakan seluruh informasi secara akurat dan konsisten dalam berbagai kondisi pengamatan. Untuk memanfaatkan informasi komplementer dari berbagai sumber citra, diperlukan pengintegrasian data multisumber, yang sering disebut sebagai <i>remote sensing image fusion</i> atau lebih umum <i>data fusion</i>, guna menghasilkan citra yang lebih mudah diinterpretasi, kaya akan informasi dan lebih bermakna untuk digunakan pada proses analisis lanjutan (Pohl & van Genderen, 2016).
 					</p>
-					<p>
-						Menurut Pohl dan van Genderen (1998), secara hierarkis Remote Sensing Image Fusion dapat dibagi ke dalam tiga level, yaitu level piksel, fitur (feature), dan keputusan (decision).
-					</p>
+					<br>
+					<h4>
+						<b>
+							Understanding Remote Sensing Image Fusion
+						</b>
+					</h4>
 					<figure>
-						<img src="../static/assets/img/Pembagian Level RSIF.png" style="width: 100%; max-width: 550px; display: block; margin: 0 auto;">
+						<img src="../static/assets/img/Processing Level of RSIF.png" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
 						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 5. Pembagian level Remote Sensing Image Fusion (Pohl & van Genderen, 1998)
+							Gambar 5. Pembagian level <i>Remote Sensing Image Fusion</i> (Pohl & van Genderen, 1998)
 						</figcaption>
 					</figure>
 					<p>
-						Sebagaimana diilustrasikan, proses fusion citra berbeda pada setiap level. Berikut ini disajikan penjelasan untuk masing-masing level tersebut.
+						Secara umum, Remote Sensing Image Fusion diklasifikasikan ke dalam tiga level, yang didasarkan pada tingkatan input yang di-fusi, yaitu <i>pixel-level fusion</i>, <i>feature-level fusion</i>, dan <i>decision-level fusion</i> (Pohl & Van Genderen, 1998). 
 					</p>
 					<ol>
 						<li style="margin-bottom: 10px;">
-							<strong>Level Piksel:</strong> Fusion dilakukan langsung terhadap dua atau lebih citra mentah dengan menggabungkan informasi pada tingkat piksel, sehingga menghasilkan citra gabungan yang mempertahankan informasi dari masing-masing sumber dan lebih fleksibel untuk berbagai jenis analisis.
+							<strong><i>Pixel Level Fusion</i></strong> Fusion dilakukan langsung terhadap dua atau lebih citra mentah dengan menggabungkan informasi pada tingkat piksel, sehingga menghasilkan citra gabungan yang mempertahankan informasi dari masing-masing sumber dan lebih fleksibel untuk berbagai jenis analisis.
 						</li>
 						<li style="margin-bottom: 10px;">
-							<strong>Level Fitur:</strong> Fitur-fitur penting (tepi, bentuk, atau tekstur) diekstraksi terlebih dahulu dari masing-masing citra sumber, kemudian fitur-fitur tersebut digabungkan untuk membentuk feature map yang merepresentasikan informasi utama dari seluruh citra sumber. 
+							<strong><i>Feature Level Fusion</i>:</strong> Fitur-fitur penting (tepi, bentuk, atau tekstur) diekstraksi terlebih dahulu dari masing-masing citra sumber, kemudian fitur-fitur tersebut digabungkan untuk membentuk feature map yang merepresentasikan informasi utama dari seluruh citra sumber. 
 						<li style="margin-bottom: 10px;">
-							<strong>Level Keputusan:</strong> Identifikasi atau klasifikasi dilakukan secara terpisah pada masing-masing citra sumber, kemudian hasil keputusan dari tiap proses identifikasi tersebut digabungkan untuk memperoleh keputusan akhir.
+							<strong><i>Decision Level Fusion</i>:</strong> Identifikasi atau klasifikasi dilakukan secara terpisah pada masing-masing citra sumber, kemudian hasil keputusan dari tiap proses identifikasi tersebut digabungkan untuk memperoleh keputusan akhir.
 						</li>
 					</ol>
 					<p>
-						Meskipun proses data fusion berpotensi menyebabkan hilangnya sebagian informasi dari citra sumber, hasil akhirnya justru memberikan nilai tambah melalui penyajian informasi yang lebih terpadu dan bermakna. Bahkan, data fusion dipandang sebagai salah satu solusi utama dalam mengoptimalkan ekstraksi informasi dari data penginderaan jauh (Zhang, 2010).
+						Meskipun proses <i>data fusion</i> berpotensi menyebabkan hilangnya sebagian informasi dari citra sumber, hasil akhirnya justru memberikan nilai tambah melalui penyajian informasi yang lebih terpadu dan bermakna. Bahkan, Zhang (2010) turut menyatakan bahwa:
 					</p>
-				</div>
-				
-				<div class="urban-sensing-fusion" style="padding-top: 2rem;">
-					<h1 class="section-title" style="padding-bottom: 1.5rem;"><b>Multi-Source Remote Sensing dengan Data Fusion untuk Kawasan Perkotaan</b></h1>
-					<p>
-						Kawasan perkotaan memiliki karakteristik yang kompleks, seperti kepadatan bangunan yang tinggi, keragaman penutup lahan, serta kedekatan antar objek, yang seringkali menyulitkan klasifikasi penggunaan lahan secara akurat (Aryal et al., 2023; Qian et al., 2020). Dalam konteks ini, penerapan data fusion menjadi sangat relevan karena memungkinkan integrasi informasi dari berbagai sumber citra, yang diharapkan dapat meningkatkan akurasi dan keandalan dalam analisis spasial wilayah perkotaan.
-					</p>
-					<p>
-						Dalam konteks penerapan data fusion untuk wilayah perkotaan, kombinasi citra SAR (Synthetic Aperture Radar) dan citra optik sering digunakan karena masing-masing memiliki keunggulan yang dapat saling melengkapi. Penggabungan citra SAR dan optik melalui pendekatan pixel-level data fusion memungkinkan integrasi tekstur spasial dari citra SAR dengan informasi spektral dari citra optik, memberikan gambaran yang lebih akurat tentang wilayah perkotaan. Kombinasi ini meningkatkan interpretabilitas citra dan mempermudah ekstraksi fitur untuk klasifikasi penggunaan lahan perkotaan.
-					</p>
-					<p>
-						Selanjutnya, penelitian ini difokuskan pada eksplorasi pemanfaatan pixel-level data fusion antara citra satelit SAR dan optik resolusi menengah untuk mengkaji potensi data fusion di kawasan perkotaan. 
-					</p>
-					<h4><b>Sumber Data dan Lokasi Penelitian</b></h4>
-					<figure>
-						<img src="../static/assets/img/Peta Jambi Menurut S2.png" style="width: 100%; max-width: 550px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 6. Wilayah Perkotaan Jambi dalam Sentinel-2 Tahun 2021
-						</figcaption>
-					</figure>
-					<p>
-						Kombinasi Band yang dipilih untuk penelitian ini adalah band VV Polarization yang digunakan dari produk Sentinel-1 Level GRD dengan polarimetri IW, dan band Sentinel-2 dengan true band color RGB. Keduanya merupakan band yang diambil pada level resolusi spasial menengah, 10m. Adapun lokasi studi yang dipilih adalah Kota Jambi, Indonesia, yang memiliki karakteristik tutupan lahan yang beragam, sehingga dinilai relevan sebagai lokus penelitian ini.
-					</p>
-					<h4><b>Kerangka Pikir Penelitian</b></h4>
-					<figure>
-						<img src="../static/assets/img/Kerangka Penelitian Sekar.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 7. Kerangka Pikir Penelitian
-						</figcaption>
-					</figure>
-					<p>
-						Dibawah ini disajikan hasil dari masing-masing tujuan penelitian yang diajukan.
-					</p>
-					<h4><b>Pembangunan Framework Urban Sensing Fusion untuk multi-source remote sensing data fusion level piksel pada citra satelit SAR Sentinel-1 dan citra satelit optik Sentinel-2</b></h4>
-					<p>
-						Penelitian ini mengikuti prinsip remote sensing image fusion, yang merupakan pengembangan dari kerangka multi-source data fusion yang dispesifikan pada input data berupa citra satelit. Untuk memastikan alur penelitian yang konsisten dan terstandar, dikembangkan sebuah framework bernama Urban Sensing Fusion. Framework ini mencakup kerangka tahap akuisisi data, pre-processing, pixel level image fusion, hingga klasifikasi wilayah perkotaan. Berikut disajikan rancangan framework yang dibangun. 
-					</p>
-					<figure>
-						<img src="../static/assets/img/urban-sensing-framework.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 8. Rancangan Framework yang Diusulkan (Urban Sensing Fusion Framework)
-						</figcaption>
-					</figure>
-					<p>
-						Adapun nama framework yang diusulkan adalah <b>Urban Sensing Fusion</b>. Secara umum, framework ini menyajikan tahapan lengkap dalam kajian pemanfaatan multi-source remote sensing data fusion pada kawasan perkotaan. Proses diawali dengan tahap pre-processing data input, yaitu citra Sentinel-1 Level GRD dengan polarisasi VV dan citra Sentinel-2 pada band RGB. Kajian selanjutnya dibagi menjadi dua skenario wilayah, yaitu wilayah homogen dan heterogen. Pada masing-masing wilayah, dilakukan analisis mendalam untuk mengevaluasi penerapan pixel-level data fusion menggunakan beberapa metode, seperti Brovey, Intensity-Hue-Saturation (IHS), Principal Component Substitution, dan Gram-Schmidt. 
-					</p>
-					<p>
-						Selanjutnya, hasil analisis dan penerapan best practice pada masing-masing wilayah digunakan sebagai dasar penerapan pada skala kawasan perkotaan secara keseluruhan. Pada tahap ini, dilakukan klasifikasi tutupan lahan perkotaan untuk mengevaluasi potensi pemanfaatan data fusion secara lebih komprehensif.
-					</p>
+					<blockquote>
+						Penggabungan citra multisumber dapat dianggap sebagai solusi utama untuk mengoptimalkan ekstraksi informasi dari data penginderaan jauh (<i>remote sensing</i>)
+					</blockquote>
 					<br>
 
-					<h4><b>Implementasi Framework Urban Sensing Fusion untuk citra satelit kawasan perkotaan di Kota Jambi </b></h4>
-					<p>
-						Berikut ini disajikan gambaran skenario untuk implementasi framework yang diusulkan pada kawasan perkotaan Kota Jambi. 
-					</p>
-					<figure>
-						<img src="../static/assets/img/skenario-percobaan-fusion.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 9. Skenario Implementasi Urban Sensing Fusion pada Wilayah Perkotaan Kota Jambi
-						</figcaption>
-					</figure>
-					<p>
-						Berdasarkan kerangka skenario yang telah diberikan, berikut merupakan hasil dari implementasi untuk masing-masing jenis wilayah.
-					</p>
-					<p>
-						<b>1. Implementasi Urban Sensing Fusion pada Kawasan Perkotaan Homogen</b>
-					</p>
-					<figure>
-						<img src="../static/assets/img/fusion-wilayah-homogen.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 10. Citra Hasil Urban Sensing Fusion untuk Wilayah Perkotaan Homogen
-						</figcaption>
-					</figure>
-					<p>
-						Pada kawasan perkotaan homogen, didapatkan bahwa hasil dari metode Urban Sensing Fusion PCS, Urban Sensing Fusion IHS, dan Urban Sensing Fusion Gram-Schmidt, memberikan representasi visual yang mirip. Sebaliknya, pada metode Urban Sensing Brovey¸ terjadi kecenderungan distorsi spektral yang lebih tinggi terhadap citra Sentinel-2. Meskipun begitu, hasil citra dari tiap metode menunjukkan konsistensi dalam pola penyajian spektral untuk objek dua objek perkotaan dengan nilai spektral yang mirip sebagaimana ditunjukkan berikut. 
-					</p>
-					<figure>
-						<img src="assets/img/identifikasi-visual-homogen.png" style="width: 70%; max-width: 600px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 11. Identifikasi Visual pada Kawasan Perkotaan Homogen
-						</figcaption>
-					</figure>
-					<p>
-						Pada Gambar 11, dapat dilihat adanya keberadaan dari dua tutupan lahan berbeda yang terletak berdekatan dan memiliki nilai spektral yang cenderung mirip. Notasi merah merujuk pada lapangan golf, yang dalam penelitian ini diikutsertakan sebagai built-up area. Sedangkan itu, notasi oranye menunjukkan tutupan lahan vegetasi. Hal ini dapat menyebabkan adanya potensi misklasifikasi. Dengan menggunakan citra hasil fusion, perbedaan warna antar kedua tutupan lahan lebih terlihat dengan jelas, terutama pada metode Urban Sensing Brovey, dimana vegetasi dicirikan dengan warna piksel hijau yang lebih terang dan kontras sedangkan lapangan golf lebih gelap. 
-					</p>
+					<h2>
+						<b>
+							Research Focuses
+						</b>
+					</h2>
+					<div style="display: flex; max-width: 1200px; margin: 30px auto; gap: 1rem; align-items: center;" class="data-engineering-container">
+						<div style="flex: 0 0 30%; text-align: center;">
+							<img src="../static/assets/img/urban-remote-sensing.png" alt="Urban Remote Sensing Illustration" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+						</div>
+
+						<div style="flex: 1; min-width: 0;">
+							<p class="px-0 mx-0">
+								Dengan memanfaatkan pendekatan <i>remote sensing image fusion</i>, selanjutnya penelitian ini akan dibahas secara lebih lanjut dalam konteks pemetaan wilayah perkotaan dengan menggabungkan citra satelit SAR dan optik. Penjelasan mengenai data, metode, serta hasil analisis akan disajikan pada halaman <b>Research</b>.
+							</p>
+							<a href="<?= 'research.php'; ?>" class="btn btn-primary">
+								View Research Section
+							</a>
+						</div>
+					</div>
 					
-					<p>
-						<b>2. Implementasi Urban Sensing Fusion pada Kawasan Perkotaan Heterogen</b>
-					</p>
-					<figure>
-						<img src="../static/assets/img/fusion-wilayah-heterogen.png" style="width: 100%; max-width: 1000px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 12. Citra Hasil Urban Sensing Fusion untuk Wilayah Perkotaan Heterogen
-						</figcaption>
-					</figure>
-					<p>
-						Pada kawasan heterogen, perbandingan performa untuk tiap citra dari hasil metode Urban Sensing Fusion lebih terlihat. Metode Urban Sensing Fusion PCS dan Urban Sensing Fusion Gram-Schmidt cenderung mirip satu sama lain. Sedangkan metode Urban Sensing Fusion Brovey kembali memberikan hasil representasi visual dengan perbedaan nilai spektral yang jauh dengan citra Sentinel-2. Lebih lanjut, terdapat perbedaan dari cara metode Urban Sensing Fusion IHS menggabungkan dan merepresentasikan nilai untuk kawasan sungai. Metode ini cenderung mengembalikan warna piksel yang lebih terang. 
-					</p>
-					<p>
-						Lebih lanjut, disajikan hasil identifikasi visual untuk objek pada kawasan perkotaan heterogen sebagai berikut.
-					</p>
-					<figure>
-						<img src="../static/assets/img/identifikasi-visual-heterogen.png" style="width: 70%; max-width: 900px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 13. Identifikasi Visual pada Kawasan Perkotaan Heterogen
-						</figcaption>
-					</figure>
-					<p>
-						Ditinjau dari citra Sentinel-2 (kiri), dapat dilihat untuk dua kelas tersebut memiliki nilai piksel yang sangat mirip. Sedangkan apabila dilihat dari gambar ground truth, subset wilayah yang terpilih merupakan gabungan dari tutupan lahan danau dan vegetasi yang saling berdekatan dan tampak bersebelahan di citra satelit. Dengan nilai yang hampir mirip, sesuai dengan skenario sebelumnya, hal ini berpotensi menyebabkan adanya misklasifikasi. Apabila diidentifikasi dari luas danau yang cukup besar, potensi misklasifikasi pada kelas ini dapat menurunkan performa metode klasifikasi secara signifikan. 
-					</p>
-					<p>
-						Di sisi lain, dengan perbedaan nilai backscatter antara wilayah perairan dan vegetasi atau tanah datar, kombinasi nilai backscatter dan spektral mampu memberikan representasi yang berbeda pada dua tutupan lahan yang cenderung mirip bila ditinjau dari citra optik. Hal ini sejalan terjadi pada keempat metode Urban Sensing Fusion, dimana representasi danau menjadi lebih gelap dan dapat terdiferensiasi dengan vegetasi yang berwarna cenderung kehijauan. 
-					</p>
-
-					<p>
-						<b>3. Klasifikasi kawasan perkotaan Kota Jambi dengan menggunakan multi-source remote sensing data fusion dan machine learning</b>
-					</p>
-					<p>
-						Pada penelitian ini, dilakukan pixel-level fusion untuk wilayah perkotaan Jambi dengan tahapan sebagai berikut.
-					</p>
-					<figure>
-						<img src="../static/assets/img/fusion-level-perkotaan.png" style="width: 70%; max-width: 900px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 14. Citra Hasil Urban Sensing Fusion untuk Level Kota Jambi
-						</figcaption>
-					</figure>
-					<p>
-						Citra hasil fusion pada level perkotaan kemudian akan dijadikan sebagai input untuk klasifikasi tutupan lahan yang dilakukan seperti berikut ini.
-					</p>
-					<figure>
-						<img src="../static/assets/img/hasil-klasifikasi.png" style="width: 70%; max-width: 900px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 15. Perbandingan Peta Klasifikasi Tutupan Lahan Kota Jambi dengan Citra Urban Sensing Fusion
-						</figcaption>
-					</figure>
-					<p>
-						Hasil secara umum menunjukkan bahwa pengklasifikasian wilayah perkotaan dengan memanfaatkan citra Urban Sensing Fusion memberikan hasil yang cukup menjanjikan. Apabila ditelaah secara umum, untuk kelas-kelas mayoritas pada Kota Jambi dapat terklasifikasikan dengan baik. Berikut disajikan perbandingan metriks evaluasi untuk tiap-tiap citra input dan perbandingannya dengan data citra Sentinel-2.
-					</p>
-					<figure>
-						<img src="../static/assets/img/evaluasi-hasil-klasifikasi.png" style="width: 70%; max-width: 900px; display: block; margin: 0 auto;">
-						<figcaption style="font-size: 12px; color: #555; margin-top: 0.5rem; text-align: center;">
-							Gambar 16. Perbandingan Perfoma Hasil Klasifikasi Tutupan Lahan Wilayah Perkotaan Jambi
-						</figcaption>
-					</figure>
-					<p>
-						Secara umum, penggunaan citra Urban Sensing Fusion Brovey mampu memberikan peningkatan pada angka evaluasi untuk pengklasifikasian kawasan perkotaan Kota Jambi dengan karakteristik tutupan lahan yang beragam. Dalam training set yang sama, bahkan citra tersebut mampu bersaing dengan citra Sentinel-2. 
-					</p>
-				</div>
-
-				<div class="closing">
-					<h1 class="section-title" style="padding-bottom: 1.5rem;"><b>Kesimpulan</b></h1>
-					<p>
-						Berdasarkan hasil identifikasi visual pada masing-masing jenis wilayah, dapat disimpulkan bahwa Urban Sensing Fusion memberikan keunggulan dari segi interpretabilitas objek. Keunggulan ini sangat bermanfaat, terutama dalam membedakan objek pada wilayah kompleks seperti kawasan perkotaan. Selain itu, citra hasil fusion terbukti mampu meningkatkan performa evaluasi klasifikasi, yang ditunjukkan melalui peningkatan nilai akurasi, F1-score, precision, dan recall pada wilayah perkotaan. Pada skala perkotaan, klasifikasi tutupan lahan menggunakan metode Urban Sensing Fusion Brovey menghasilkan performa yang lebih baik dibandingkan penggunaan citra Sentinel-2, dengan akurasi sebesar 86,79%, F1-score 86,96%, precision 87,44%, dan recall 86,66%.
-					</p>
-					<p>
-						Selain itu, berdasarkan hasil penerapannya, dapat dikatakan bahwa rancangan Framework Urban Sensing Fusion memiliki potensi besar untuk dikembangkan menjadi kerangka kerja dalam mengidentifikasi best practice dari penerapan data fusion  di kawasan perkotaan. 
-					</p>
-					<p>
-						Selanjutnya, diperlukan adanya eksplorasi lanjutan dan uji coba untuk parameter-parameter yang ada pada metode fusion untuk memperoleh pengembangan metode yang lebih baik. Serta diperlukan pemilihan training sample untuk kelas pada wilayah perkotaan yang lebih seimbang, tahapan post-processing lanjutan untuk tiap citra hasil fusi guna mendapatkan kualitas input metode klasifikasi yang lebih baik seperti image filtering, serta penggunaan metode klasifikasi yang lebih advanced, terutama metode yang lebih baik untuk penanganan kelas tidak seimbang. 
-					</p>
 				</div>
 			</div>
 			<!-- End Post Content -->
 
+			<br>
 			<!-- Begin Tags -->
 			<div class="after-post-tags">
 				<ul class="tags">
@@ -364,6 +270,8 @@
 <!-- End Footer
 ================================================== -->
 
+<?php include __DIR__ . '/components/backToTop.html'; ?>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -372,6 +280,7 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="assets/js/mediumish.js"></script>
+
 
 </body>
 </html>

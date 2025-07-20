@@ -40,6 +40,7 @@ section {
 	font-size:1.4rem;
 	margin-bottom:27px;
 }
+
 .section-title span {
 	border-bottom:1px solid rgba(0,0,0,.44);
 	display:inline-block;
@@ -273,22 +274,34 @@ blockquote {
 .svgIcon {
 	vertical-align:middle;
 }
-.urban-sdgs-content {
+
+.flex-container {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  gap: 2rem;
 }
 
-.sdgs-image {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+.flex-image {
+  flex: 0 0 40%;
+  min-width: 300px;
 }
 
-.sdgs-text {
+.flex-text {
   flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .data-engineering-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .data-engineering-container > div {
+    width: 100% !important;
+  }
 }
 
 @media (min-width:1024px) {
@@ -333,6 +346,7 @@ blockquote {
 		text-align:center;
 	}
 }
+
 .share,.share a {
 	color:rgba(0,0,0,.44);
 	fill:rgba(0,0,0,.44);
