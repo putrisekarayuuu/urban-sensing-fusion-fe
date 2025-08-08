@@ -1,0 +1,28 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.6.0"
+    }
+  },
+  "routes": [
+    { "src": "^/$", "dest": "/api/index.php" },
+
+    { "src": "^/index$", "dest": "/api/index.php" },
+    { "src": "^/index.php$", "dest": "/api/index.php" },
+
+    { "src": "^/fusion$", "dest": "/api/fusion.php" },
+    { "src": "^/fusion.php$", "dest": "/api/fusion.php" },
+
+    { "src": "^/research$", "dest": "/api/research.php" },
+    { "src": "^/research.php$", "dest": "/api/research.php" },
+
+    { "src": "^/header$", "dest": "/api/header.php" },
+    { "src": "^/header.php$", "dest": "/api/header.php" },
+
+    { "src": "^/urban-classification$", "dest": "/api/urban-classification.php" },
+    { "src": "^/urban-classification.php$", "dest": "/api/urban-classification.php" },
+
+    { "src": "^/urban-village$", "dest": "/api/urban-village.php" },
+    { "src": "^/urban-village.php$", "dest": "/api/urban-village.php" }
+  ]
+}
